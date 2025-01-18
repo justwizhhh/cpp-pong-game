@@ -1,7 +1,5 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/xYlBQHEz)
+# C++ Pong Game (ARCHIVE)
 
-A recreation of the game 'Pong', using C++ and SFML.
+A clone of the arcade game 'Pong', with a multiplayer mode, and a singleplayer mode where you play against a CPU paddle of toggleable difficulty.
 
-Planning documents are included in the 'Planning-Documents' folder inside the code, but are also included on Blackboard, as individual files as well as screenshots.
-
-Games in C++ - Assignment Exercise 1  - Developed by Dominik Heiler (23015707)
+Made in ~2 months for a university assignment submission, as part of the "Games in C++' module at UWE Bristol (BSc Games Technology).
