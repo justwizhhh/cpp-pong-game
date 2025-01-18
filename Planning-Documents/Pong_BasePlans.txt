@@ -1,0 +1,47 @@
+
+Games in C++ - Pong Game - Notes for Base Plans
+Dominik Heiler
+
+---------------------------------------------------------
+
+Main game objects:
+ - Paddle
+   - Player Paddle (paddle1)
+   - AI Paddle (paddle2)
+ - Ball
+
+UI objects:
+ - Titlescreen:
+   - Title Text/Graphic
+   - Menu Option Texts/Graphics
+ - Main game:
+   - Scoreboard Text
+     - Two on both sides of the "arena"
+   - 'Player 1' and ' Player 2' nametags
+ - Pause screen:
+   - 'Paused' Text/Graphic
+   - Menu Option Texts/Graphics
+ - Game over screen:
+   - "Game Over" Text/Graphic
+   - Menu Option Texts/Graphics
+
+---------------------------------------------------------
+
+Controls:
+ - AD Keys - Menu navigation
+ - WS Keys = Player 1 controls
+ - Up/Down Arrow Keys = Player 2 controls
+ - Enter - Pause/Quit
+
+---------------------------------------------------------
+
+Personal notes:
+ - Collision detection to use regular AABB
+   - Adjusting the angle of the ball could be done by comparing dot product maybe?
+   - Angle variable should NOT be an angle or else the sprite's appearance and collision might break
+ - Two separate colours for paddles
+ - Enums for menu navigation maybe, instead of switches
+ - Could make additional modes later if I get the time
+	- Player VS AI
+	- Player VS Themselves? (Paddle orbits around the centre of the screen, constantly changing the 
+	  paddle sprite's rotation in 'update')

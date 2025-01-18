@@ -1,0 +1,63 @@
+
+Games in C++ - Pong Game - Pseudo-Code Collection
+Dominik Heiler
+
+---------------------------------------------------------
+
+Simple collision detection
+
+bool Collision (object_a, object_b)
+
+	bool colX, colY
+
+	// Horizontal collision
+	if (object_a.x + object_a.size.x) is bigger than (object_b.x)
+	AND if (object_b.x + object_b.size.x) is bigger than (object_a.x)
+		colX = true
+
+	// Vertical collision
+	if (object_a.y + object_a.size.y) is bigger than (object_b.y)
+	AND if (object_b.y + object_b.size.y) is bigger than (object_a.y)
+		colY = true
+	
+	if both colX and colY equal true
+		return true
+
+
+---------------------------------------------------------
+
+Ball bouncing logic (first draft)
+
+if ball is colliding with ball
+	
+	ball.velocity.x *= -1
+	ball.velocity.y *= dotProduct(paddle.normal, ball.velocity)
+
+The ball is going to get mirrored no matter which way it's going to get hit, so i just need to multiply by -1
+'paddle.normal' would be the right-side face of the paddle (with a value of (0, 1))
+
+---------------------------------------------------------
+
+Menu navigation
+
+enum game_states = 'TITLE_SCREEN', 'MAIN_GAME', 'PAUSE', 'GAME_OVER';
+int menu_choice; (Choosing between wanting to replay the game or quit can just be 
+		 changed with an int since I think I will change them in dedicated functions)
+
+---------------------------------------------------------
+
+Mouse control logic
+
+if 'mouseControl' is true
+
+	if mouse is positioned above the game window
+		paddle.y = 0
+	else if mouse is positioned below the game window
+		paddle.y = screenResolution.size.y (the height of the window)
+	else
+		paddle.y = mouse.y
+
+Mouse position could either be calculated:
+	- Based on the player's whole monitor display
+	- Or relative to the game window
+	- Or based on the centre of the screen (a 'middleOfScreen' variable that gets added/subtracted to the mouse's position maybe)
